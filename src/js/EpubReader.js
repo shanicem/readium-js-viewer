@@ -417,6 +417,18 @@ BookmarkData){
             $iframe.attr("aria-label", "EPUB");
 
             lastIframe = $iframe[0];
+
+            var doc = ( $iframe[0].contentWindow || $iframe[0].contentDocument ).document;
+            setTimeout(function(){
+                var $contentDocHead = $("head", doc);
+                $contentDocHead.append(
+                    $("<link/>", {
+                        rel: "stylesheet",
+                        href: moduleConfig.annotationCSSUrl,
+                        type: "text/css"
+                    })
+                );
+            }, 0);
         });
 
         readium.reader.on(ReadiumSDK.Events.PAGINATION_CHANGED, function (pageChangeData)

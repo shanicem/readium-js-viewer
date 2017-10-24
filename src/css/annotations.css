@@ -9,3 +9,25 @@
     opacity: 0.4;
     background-color: red;
 }
+
+.annotator-highlights-always-on .annotator-hl {
+    background-color: rgba(255, 255, 60, 0.3) !important;
+  }
+  @media (pointer: coarse) {
+    .annotator-highlights-always-on .annotator-hl {
+      cursor: pointer;
+    }
+  }
+  .annotator-highlights-always-on .annotator-hl .annotator-hl {
+    background-color: rgba(206, 206, 60, 0.4) !important;
+  }
+  .annotator-highlights-always-on .annotator-hl .annotator-hl .annotator-hl {
+    background-color: rgba(192, 192, 49, 0.4) !important;
+  }
+  
+  .annotator-hl.annotator-hl-focused {
+    background-color: rgba(156, 230, 255, 0.5) !important;
+  }
+  .annotator-hl.annotator-hl-focused .annotator-hl {
+    background-color: transparent !important;
+  }
